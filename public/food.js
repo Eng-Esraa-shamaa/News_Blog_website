@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiKey2 = '41868b502fcb461683436ebc3f534cfd'; // Replace with your Spoonacular API key
+    const apiKey2 = '41868b502fcb461683436ebc3f534cfd'; //  Spoonacular API key
     const recipeContainer = document.getElementById('recipeContainer');
   
     async function fetchRecipes() {

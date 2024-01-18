@@ -4,12 +4,12 @@ const latestposts = document.getElementById('latestposts');
 
 async function fetchNews(category) {
   try {
-    /*const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`);*/
+    //using apikey to get the response from news api
     const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apiKey}`);
     const data = await response.json();
 
     latestposts.innerHTML = ''; // Clear previous articles
-
+	//make sure that there are articles
     if (data.articles && data.articles.length > 0) {
       let row = document.createElement('div');
       row.classList.add('row');
@@ -25,7 +25,7 @@ async function fetchNews(category) {
 
         const latest = document.createElement('div');
         latest.classList.add('card');
-
+	//insert articles on html
         latest.innerHTML = `
           <div class="col-md-12 mb-md-0 p-md-4 food-img">
             <img src="${urlToImage}" class="w-100"  alt="${title}">

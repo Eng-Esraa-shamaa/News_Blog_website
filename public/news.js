@@ -1,43 +1,4 @@
-/*const apiKey = '76aa287b08634e9285b24e7ee4e6728b'; // Replace with your NewsAPI key
-const newsContainer = document.getElementById('newsContainer');
-
-async function fetchNews(category) {
-  try {
-    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`);
-    const data = await response.json();
-
-    newsContainer.innerHTML = ''; // Clear previous articles
-
-    if (data.articles && data.articles.length > 0) {
-      data.articles.forEach(article => {
-        const newsArticle = document.createElement('div');
-        newsArticle.classList.add('card');
-
-        const { title, description, url, urlToImage } = article;
-
-        newsArticle.innerHTML = `
-          <h2>${title}</h2>
-          <img src="${urlToImage || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${title}">
-          <div class="card-body">
-          <p class = "card-text">${description || 'No description available'}</p>     
-          </div>
-          <a href="${url}" target="_blank" class="card-link">Read more</a>
-        `;
-        newsContainer.appendChild(newsArticle);
-      });
-    } else {
-      console.log('No articles found in the response.');
-    }
-  } catch (error) {
-    console.error('Error fetching or parsing news:', error);
-  }
-}
-
-// Call fetchNews initially with a default category (e.g., 'general')
-window.onload = function() {
-  fetchNews('general');
-}; */
-const apiKey = '76aa287b08634e9285b24e7ee4e6728b'; // Replace with your NewsAPI key
+const apiKey = '76aa287b08634e9285b24e7ee4e6728b'; // NewsAPI key
 const newsContainer = document.getElementById('newsContainer');
 
 async function fetchNews(category) {
@@ -87,7 +48,7 @@ async function fetchNews(category) {
   }
 }
 
-// Call fetchNews initially with a default category (e.g., 'general')
+// Call fetchNews initially with a default category 'general'
 window.onload = function () {
   fetchNews('general');
 };

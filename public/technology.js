@@ -29,7 +29,7 @@ function displayPosts(data, site) {
   siteHeader.textContent = `Posts from ${site}`;
   postsList.appendChild(siteHeader);
 
-  const posts = data.items.slice(0, 10); // Display only top 5 posts
+  const posts = data.items.slice(0, 10); // Display only top 10 posts
 
   posts.forEach(post => {
     const postElement = document.createElement('div');
